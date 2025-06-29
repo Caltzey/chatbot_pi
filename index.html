@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <title>Chatbot Kampus</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="chatbox">
-    <iframe height="430" width="350" src="https://bot.dialogflow.com/23be7550-e0b4-41b0-9d49-ad1dd9833655"></iframe>
-  </div>
+  <h2>Selamat datang di Chatbot Kampus</h2>
+
+  <!-- Tambahkan Messenger Script -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="chatbot_PI"
+    agent-id="23be7550-e0b4-41b0-9d49-ad1dd9833655"
+    language-code="id"
+  ></df-messenger>
 </body>
 </html>
