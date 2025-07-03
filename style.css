@@ -172,6 +172,6 @@ body {
   }
 }
 
-.header-tersembunyi {
-  display: none !important;
+html.df-messenger-fullscreen .navbar {
+  z-index: 0;
 }
