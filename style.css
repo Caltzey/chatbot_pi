@@ -7,7 +7,6 @@
   --primary-font: 'Poppins', sans-serif;
 }
 
-/* Apply styles to the Dialogflow Messenger Chat Window */
 df-messenger {
   --df-messenger-bot-message: #f0f8ff;
   --df-messenger-button-titlebar-color: #34495e;
@@ -17,8 +16,9 @@ df-messenger {
   --df-messenger-user-message: #e6e6fa;
   --df-messenger-input-box-color: #f7f7f7;
   --df-messenger-input-font-color: var(--dark-text);
-  --df-messenger-titlebar-background-color: #89CFF0; /* A slightly darker blue for contrast */
+  --df-messenger-titlebar-background-color: #89CFF0;
   --df-messenger-titlebar-font-color: var(--white);
+  --df-messenger-margin: 24px; /* <-- TAMBAHKAN BARIS INI */
 }
 
 * {
@@ -172,6 +172,3 @@ body {
   }
 }
 
-.header-di-belakang {
-  z-index: 0 !important;
-}
