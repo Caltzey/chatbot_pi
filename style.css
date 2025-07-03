@@ -10,7 +10,7 @@
 /* Apply styles to the Dialogflow Messenger Chat Window */
 df-messenger {
   --df-messenger-bot-message: #f0f8ff;
-  --df-messenger-button-titlebar-color: var(--white);
+  --df-messenger-button-titlebar-color: #34495e;
   --df-messenger-chat-background-color: var(--white);
   --df-messenger-font-color: var(--dark-text);
   --df-messenger-send-icon: #8e9eab;
