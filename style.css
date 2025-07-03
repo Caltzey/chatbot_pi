@@ -171,4 +171,6 @@ body {
     height: 40px;
   }
 }
-
+.header-tersembunyi {
+  display: none !important;
+}
