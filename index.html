@@ -41,6 +41,38 @@
     language-code="id"
 ></df-messenger>
 
+  <script>
+    // Menunggu seluruh elemen halaman siap
+    window.addEventListener("DOMContentLoaded", () => {
+      // Ambil elemen header dan chatbot dari dokumen
+      const header = document.querySelector(".navbar");
+      const dfMessenger = document.querySelector("df-messenger");
+
+      // Buat "pengamat" yang akan memantau perubahan pada chatbot
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          // Jika ada perubahan atribut pada chatbot (misalnya saat dibuka/ditutup)
+          if (mutation.type === "attributes" && mutation.attributeName === "expanded") {
+            const isExpanded = dfMessenger.hasAttribute("expanded");
+
+            if (isExpanded) {
+              // JIKA CHAT TERBUKA: tambahkan kelas untuk menyembunyikan header
+              header.classList.add("header-tersembunyi");
+            } else {
+              // JIKA CHAT TERTUTUP: hapus kelas agar header muncul lagi
+              header.classList.remove("header-tersembunyi");
+            }
+          }
+        });
+      });
+
+      // Mulai proses pengamatan pada elemen chatbot
+      observer.observe(dfMessenger, {
+        attributes: true,
+      });
+    });
+  </script>
+
 </body>
 </html>
 
