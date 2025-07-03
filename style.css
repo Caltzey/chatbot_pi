@@ -172,6 +172,6 @@ body {
   }
 }
 
-html.df-messenger-fullscreen .navbar {
+html.df-messenger-fullscreen .navbar-container {
   display: none;
 }
