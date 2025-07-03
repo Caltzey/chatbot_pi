@@ -7,18 +7,10 @@
   --primary-font: 'Poppins', sans-serif;
 }
 
-df-messenger {
-  --df-messenger-bot-message: #f0f8ff;
-  --df-messenger-button-titlebar-color: #34495e;
-  --df-messenger-chat-background-color: var(--white);
-  --df-messenger-font-color: var(--dark-text);
-  --df-messenger-send-icon: #8e9eab;
-  --df-messenger-user-message: #e6e6fa;
-  --df-messenger-input-box-color: #f7f7f7;
-  --df-messenger-input-font-color: var(--dark-text);
-  --df-messenger-titlebar-background-color: #89CFF0;
-  --df-messenger-titlebar-font-color: var(--white);
-  --df-messenger-margin: 24px; /* <-- TAMBAHKAN BARIS INI */
+.chatbox {
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 * {
@@ -165,7 +157,4 @@ body {
   .logo {
     height: 40px;
   }
-}
-.header-tersembunyi {
-  display: none !important;
 }
