@@ -2,19 +2,41 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatbot Kampus</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Selamat datang di Chatbot Kampus</h2>
 
-  <!-- Tambahkan Messenger Script -->
+  <header class="navbar">
+    <img src="logo.png" alt="Logo Kampus" class="logo">
+    <h1>Chatbot Kampus</h1>
+  </header>
+
+
+  <section class="hero">
+    <h2>Selamat Datang di <span>Chatbot Kampus</span></h2>
+    <p>Teman digital yang siap bantu semua pertanyaan kamu seputar kampus.</p>
+    <a href="#chatbot" class="btn">Mulai Chat</a>
+  </section>
+
+
+  <section id="chatbot" class="chatbot-container">
+    <df-messenger
+      intent="WELCOME"
+      chat-title="chatbot_PI"
+      agent-id="23be7550-e0b4-41b0-9d49-ad1dd9833655"
+      language-code="id"
+    ></df-messenger>
+  </section>
+
+
+  <footer class="footer">
+    <p>© 2025 Chatbot Kampus | Calvin PS</p>
+  </footer>
+
+
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  <df-messenger
-    intent="WELCOME"
-    chat-title="chatbot_PI"
-    agent-id="23be7550-e0b4-41b0-9d49-ad1dd9833655"
-    language-code="id"
-  ></df-messenger>
 </body>
 </html>
+
