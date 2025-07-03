@@ -41,7 +41,30 @@
     language-code="id"
     chat-icon="https://i.ibb.co/1nC3yVb/chatbot-icon.png"
   ></df-messenger>
+  
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const header = document.querySelector(".navbar");
+      const dfMessenger = document.querySelector("df-messenger");
 
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === "attributes" && mutation.attributeName === "expanded") {
+            const isExpanded = dfMessenger.hasAttribute("expanded");
+            if (isExpanded) {
+              header.classList.add("header-di-belakang");
+            } else {
+              header.classList.remove("header-di-belakang");
+            }
+          }
+        });
+      });
+
+      observer.observe(dfMessenger, {
+        attributes: true,
+      });
+    });
+  </script>
 </body>
 </html>
 
