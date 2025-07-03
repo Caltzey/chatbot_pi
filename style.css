@@ -171,6 +171,8 @@ body {
     height: 40px;
   }
 }
-html.df-messenger-fullscreen .navbar {
-  z-index: 0;
+
+html.df-messenger-fullscreen-mode .navbar,
+html.df-messenger-fullscreen-mode .navbar-container {
+  display: none !important;
 }
