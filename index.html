@@ -42,6 +42,36 @@
     chat-icon="https://i.ibb.co/1nC3yVb/chatbot-icon.png"
   ></df-messenger>
 
+  <script>
+  window.addEventListener('dfMessengerLoaded', function (event) {
+    const dfMessenger = document.querySelector("df-messenger");
+    const dfMessengerShadow = dfMessenger.shadowRoot;
+
+    const chatWrapper = dfMessengerShadow.querySelector("df-messenger-chat");
+    chatWrapper.setAttribute("chat-open", "false");
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @media screen and (max-width: 600px) {
+        df-messenger {
+          --df-messenger-minimized-chat-height: 60px !important;
+          --df-messenger-chat-height: 500px !important;
+        }
+
+        df-messenger::part(chat) {
+          max-height: 90vh !important;
+          height: auto !important;
+        }
+
+        df-messenger::part(dialog) {
+          max-height: 90vh !important;
+        }
+      }
+    `;
+    dfMessengerShadow.appendChild(style);
+  });
+</script>
+
 </body>
 </html>
 
